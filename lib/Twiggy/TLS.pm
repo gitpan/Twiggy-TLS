@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use 5.008_001;
-our $VERSION = '0.0015';
+our $VERSION = '0.0016';
 
 1;
 __END__
@@ -43,7 +43,7 @@ All files must be in PEM format. You can merge multiply entities in a one file
 =head2 tls_version
 
 Sets the version of the SSL protocol used to transmit data. The default is
-C<sslv2/3>. Other possible values are C<sslv2>, C<sslv3> or C<tlsv1>.
+C<SSLv23:!SSLv2>. See C<SSL_version> of L<IO::Socket::SSL> for other values.
 
 =head2 tls_ciphers
 
